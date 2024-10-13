@@ -1,0 +1,9 @@
+.wrapper {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
