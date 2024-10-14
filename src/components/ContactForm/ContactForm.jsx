@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContactThunk } from "../../redux/contactsOps";
 
 const ContactForm = () => {
   const initialValues = { id: "", name: "", number: "" };
@@ -15,7 +15,7 @@ const ContactForm = () => {
       name: values.name,
       number: values.number,
     };
-    dispatch(addContact(newContact));
+    dispatch(addContactThunk(newContact));
     options.resetForm();
   };
   const onlyWords = /^[a-zA-Z]+$/;

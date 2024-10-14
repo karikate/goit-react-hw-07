@@ -2,13 +2,13 @@
 // addContact - додавання нового контакту (метод POST). Базовий тип екшену це рядок "contacts/addContact".
 // deleteContact - видалення контакту по ID (метод DELETE). Базовий тип екшену це рядок "contacts/deleteContact".
 
-import { asyncThunkCreator } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 axios.defaults.baseURL = `https://670c0e727e5a228ec1cf6f7a.mockapi.io`;
 
-export const fetchContactsThunk = asyncThunkCreator(
-  `contacts / fetchAll`,
+export const fetchContactsThunk = createAsyncThunk(
+  `fetchAll`,
   async (_, thunkApi) => {
     try {
       const { data } = await axios.get(`/contacts`);
@@ -19,8 +19,8 @@ export const fetchContactsThunk = asyncThunkCreator(
   }
 );
 
-export const addContactThunk = asyncThunkCreator(
-  `contacts / addContact`,
+export const addContactThunk = createAsyncThunk(
+  `addContact`,
   async (body, thunkApi) => {
     try {
       const { data } = await axios.post(`/contacts`, body);
@@ -30,8 +30,8 @@ export const addContactThunk = asyncThunkCreator(
     }
   }
 );
-export const deleteContactThunk = asyncThunkCreator(
-  `contacts / deleteContact`,
+export const deleteContactThunk = createAsyncThunk(
+  `deleteContact`,
   async (id, thunkApi) => {
     try {
       const { data } = await axios.delete(`/contacts/${id}`);

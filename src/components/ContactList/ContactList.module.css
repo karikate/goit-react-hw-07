@@ -1,0 +1,6 @@
+.wrapper {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(4, 4fr) / repeat(5, 1fr);
+}
