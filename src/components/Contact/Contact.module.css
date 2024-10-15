@@ -5,4 +5,8 @@
   margin: 5px;
   display: flex;
   justify-content: space-between;
+  & button {
+    background-color: rgba(39, 180, 190, 0.121);
+    border: 1px solid black;
+  }
 }

@@ -23,11 +23,12 @@ a:hover {
 }
 
 body {
-  /* margin: 0; */
+  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #175e2b36;
 }
 
 h1 {
@@ -42,12 +43,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #b61717;
+
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border: 3px solid #04432b81;
 }
 button:focus,
 button:focus-visible {

@@ -1,5 +1,4 @@
 import { Field, Form, Formik, ErrorMessage } from "formik";
-import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
@@ -11,7 +10,6 @@ const ContactForm = () => {
 
   const handleSubmit = (values, options) => {
     const newContact = {
-      id: nanoid(),
       name: values.name,
       number: values.number,
     };
@@ -41,12 +39,12 @@ const ContactForm = () => {
       >
         <Form className={s.form}>
           <label className={s.label}>
-            <span>Name</span>
+            <p className={s.name}>Name</p>
             <Field className={s.input} name="name"></Field>
             <ErrorMessage name="name" component="p" className={s.error} />
           </label>
           <label className={s.label}>
-            <span>Number</span>
+            <p className={s.name}>Number</p>
             <Field className={s.input} name="number"></Field>
             <ErrorMessage name="number" component="p" className={s.error} />
           </label>

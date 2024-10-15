@@ -6,5 +6,6 @@
     border: 1px solid black;
     border-radius: 8px;
     padding: 5px;
+    background-color: rgba(39, 180, 190, 0.121);
   }
 }

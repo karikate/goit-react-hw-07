@@ -3,7 +3,7 @@
   place-content: center;
   border: 1px solid #000000;
   border-radius: 8px;
-  width: 100%;
+  width: 75%;
   margin-left: 5px;
 }
 
@@ -16,22 +16,28 @@
   display: flex;
   border-radius: 12px;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   & button {
-    padding: 5px 5px;
+    /* padding: 5px 5px; */
     border-radius: 8px;
-    margin: 5px;
+    margin: 10px;
+    background-color: rgba(39, 180, 190, 0.121);
+    border: 2px solid black;
   }
 }
 .label {
   display: flex;
   flex-direction: column;
-  place-content: center;
-  margin: 5px;
+}
+
+.name {
+  margin: 0 15px;
 }
 .input {
   width: 95%;
   border: 1px solid #000000;
   border-radius: 8px;
   padding: 5px;
+  margin: 0 auto;
+  background-color: rgba(39, 180, 190, 0.121);
 }
